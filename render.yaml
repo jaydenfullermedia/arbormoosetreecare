@@ -1,0 +1,12 @@
+# Render Blueprint — free static site
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: arbormoosetreecare
+    runtime: static
+    buildCommand: ""          # nothing to build — plain HTML/CSS/JS
+    staticPublishPath: .      # serve the repo root
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

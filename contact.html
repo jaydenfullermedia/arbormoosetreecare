@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Arbor Moose Tree Care — Get a Quote</title>
+  <meta name="description" content="Get a tree care quote from Arbor Moose. Call or text (289) 228-0303, email arbormoose@gmail.com, or send us a message. Quote back within 24 hours." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .field { margin-bottom: 18px; }
+    .field label { display: block; font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); margin-bottom: 7px; }
+    .field input, .field select, .field textarea {
+      width: 100%; font-family: var(--font-body); font-size: 0.98rem; color: var(--ink);
+      background: var(--bg-app); border: 1px solid var(--hairline-strong); border-radius: 0;
+      padding: 12px 14px;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); }
+    .field textarea { resize: vertical; min-height: 110px; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand-logo" href="index.html">
+        <img src="https://images.squarespace-cdn.com/content/v1/6519e0341ae9af156c9cbae3/7228d030-b891-47cd-bd61-16172ab55fe0/ArborMooseTC-FINAL-web.png?format=1500w" alt="Arbor Moose Tree Care" />
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="areas.html">Areas Served</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-outline" href="tel:2892280303"><span class="material-symbols-outlined" style="font-size:18px">call</span> (289) 228-0303</a>
+        <a class="btn btn-primary" href="#quote">Get a quote</a>
+        <button class="menu-toggle" aria-label="Menu">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero compact">
+    <div class="container">
+      <div class="reveal narrow">
+        <span class="eyebrow">Get in touch</span>
+        <h1>Looking for a quote?</h1>
+        <p class="lead">Send us a message, or give us a call or text. We'll get a quote back to you within 24 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT GRID -->
+  <section class="tight" id="quote">
+    <div class="container contact-grid">
+      <!-- FORM (opens email client) -->
+      <div class="reveal">
+        <h2 style="font-size:1.9rem; margin-bottom:24px">Send a message</h2>
+        <form id="quote-form">
+          <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" required /></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" /></div>
+          <div class="field"><label for="address">Property address</label><input id="address" name="address" type="text" /></div>
+          <div class="field">
+            <label for="service">What do you need?</label>
+            <select id="service" name="service">
+              <option>Pruning &amp; Reduction</option>
+              <option>Tree Removal</option>
+              <option>Stump Grinding</option>
+              <option>Cabling &amp; Bracing</option>
+              <option>Storm Damage</option>
+              <option>Planting &amp; Fertilization</option>
+              <option>Lighting</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field"><label for="message">Tell us about the job</label><textarea id="message" name="message" placeholder="A photo or two helps — you can attach them in the email that opens."></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center">Send to Arbor Moose</button>
+          <p style="font-size:0.82rem; color:var(--ink-soft); margin-top:12px">This opens your email app with the details filled in. Prefer to talk? Call or text us — it's faster.</p>
+        </form>
+      </div>
+
+      <!-- INFO CARD -->
+      <div class="reveal">
+        <div class="contact-card">
+          <h2 style="font-size:1.9rem; margin-bottom:8px">Reach us directly</h2>
+          <div class="contact-line">
+            <span class="material-symbols-outlined">call</span>
+            <div><small>Call or text</small><a href="tel:2892280303">(289) 228-0303</a></div>
+          </div>
+          <div class="contact-line">
+            <span class="material-symbols-outlined">mail</span>
+            <div><small>Email</small><a href="mailto:arbormoose@gmail.com">arbormoose@gmail.com</a></div>
+          </div>
+          <div class="contact-line">
+            <span class="material-symbols-outlined">place</span>
+            <div><small>Service area</small><span>Niagara Region, Ontario</span></div>
+          </div>
+          <div class="contact-line">
+            <span class="material-symbols-outlined">schedule</span>
+            <div><small>Response time</small><span>Quote within 24 hours</span></div>
+          </div>
+          <div class="btn-row" style="margin-top:24px">
+            <a class="btn btn-primary" href="tel:2892280303"><span class="material-symbols-outlined" style="font-size:18px">call</span> Call now</a>
+            <a class="btn btn-outline" href="sms:2892280303"><span class="material-symbols-outlined" style="font-size:18px">sms</span> Text us</a>
+          </div>
+          <div style="margin-top:24px; aspect-ratio:4/3; overflow:hidden; border:1px solid var(--hairline)">
+            <img class="photo" src="https://images.squarespace-cdn.com/content/v1/6519e0341ae9af156c9cbae3/922cc15f-b4cf-4545-a4e2-183c4d887665/20210728_091411.jpg" alt="Arbor Moose at work" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="brand-logo"><span class="name">Arbor Moose Tree Care</span></span>
+          <p>ISA Certified Arborist serving the Niagara region since 2019. Pruning, removals, stump grinding, storm cleanup and more. Family-run, fully insured.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Pruning &amp; Reduction</a></li>
+            <li><a href="services.html">Tree Removal</a></li>
+            <li><a href="services.html">Stump Grinding</a></li>
+            <li><a href="services.html">Storm Damage</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="areas.html">Areas Served</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <ul class="footer-links">
+            <li><a href="tel:2892280303">(289) 228-0303</a></li>
+            <li><a href="mailto:arbormoose@gmail.com">arbormoose@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/arbormoose/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.facebook.com/arbormoose/" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Arbor Moose Tree Care · Michael Moes ON-2299A</span>
+        <span>Niagara Region, Ontario</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    document.getElementById('quote-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = e.target;
+      var body = 'Name: ' + f.name.value
+        + '%0D%0APhone: ' + f.phone.value
+        + '%0D%0AAddress: ' + f.address.value
+        + '%0D%0AService: ' + f.service.value
+        + '%0D%0A%0D%0A' + encodeURIComponent(f.message.value);
+      window.location.href = 'mailto:arbormoose@gmail.com?subject='
+        + encodeURIComponent('Quote request from ' + f.name.value)
+        + '&body=' + body;
+    });
+  </script>
+</body>
+</html>

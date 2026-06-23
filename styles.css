@@ -323,8 +323,9 @@ section.tight { padding: 64px 0 56px; }
 .foot-bottom a:hover { color: #fff; }
 
 /* ---------- SMS floating button ---------- */
-.sms-fab { position: fixed; right: 22px; bottom: 22px; z-index: 200; display: inline-flex; align-items: center; gap: 10px; background: var(--brand); color: #fff; padding: 13px 18px; border-radius: var(--radius-pill); box-shadow: var(--shadow-lg); transition: transform 200ms var(--ease-out), background 200ms var(--ease-out); }
-.sms-fab:hover { background: var(--brand-bright); transform: translateY(-2px); }
+.sms-fab { position: fixed; right: 22px; bottom: 22px; z-index: 200; display: inline-flex; align-items: center; gap: 10px; background: var(--brand); color: #fff; padding: 13px 18px; border-radius: var(--radius-pill); box-shadow: var(--shadow-lg); opacity: 0; visibility: hidden; transform: translateY(14px); transition: opacity 260ms var(--ease-out), transform 260ms var(--ease-out), background 200ms var(--ease-out); }
+.sms-fab.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.sms-fab.visible:hover { background: var(--brand-bright); transform: translateY(-2px); }
 .sms-fab .material-symbols-outlined { font-size: 22px; }
 .sms-fab b { font-size: 0.9rem; line-height: 1.1; }
 .sms-fab small { display: block; font-size: 0.72rem; opacity: .85; }

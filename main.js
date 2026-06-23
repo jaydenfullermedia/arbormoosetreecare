@@ -29,6 +29,17 @@ document.addEventListener('DOMContentLoaded', function () {
   if (y) y.textContent = new Date().getFullYear();
 });
 
+// ---- Show the floating "Text us" button only after scrolling past the hero ----
+(function () {
+  var fab = document.querySelector('.sms-fab');
+  if (!fab) return;
+  var hero = document.querySelector('.hero');
+  if (!hero || !('IntersectionObserver' in window)) { fab.classList.add('visible'); return; }
+  new IntersectionObserver(function (entries) {
+    fab.classList.toggle('visible', !entries[0].isIntersecting);
+  }, { threshold: 0 }).observe(hero);
+})();
+
 // ---- Niagara service-area map (Leaflet, lazy-loaded) ----
 function initAreaMap() {
   if (typeof L === 'undefined' || !document.getElementById('areaMap')) return;

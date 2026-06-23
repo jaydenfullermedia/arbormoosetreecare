@@ -17,8 +17,10 @@
   --brand-deep:   #2f3722;
   --brand-soft:   #e8e3d0;
   --brand-tint:   #eef2e3;
-  --leaf:         #6f8f3f;
-  --leaf-dk:      #3f7d1e;
+  /* Single accent green = the button green. leaf/leaf-dk kept as aliases. */
+  --leaf:         #4a5536;
+  --leaf-dk:      #4a5536;
+  --brand-on-dark:#9caa7a;  /* lightened olive — only for green text on dark panels (olive is unreadable there) */
 
   /* Text */
   --ink:        #23271d;
@@ -173,7 +175,7 @@ section.tight { padding: 64px 0 56px; }
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
 .stat { text-align: center; }
 .stat .num { font-family: var(--font-mono); font-weight: 500; font-size: clamp(2.2rem, 4vw, 3rem); color: #fff; line-height: 1; }
-.stat .num .u { color: var(--leaf); }
+.stat .num .u { color: var(--brand-on-dark); }
 .stat .cap { display: block; margin-top: 10px; font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--coal-muted); }
 
 /* ---------- Trust strip ---------- */
@@ -267,9 +269,9 @@ section.tight { padding: 64px 0 56px; }
 
 /* ---------- Lead block (dark CTA panel) ---------- */
 .lead-block { background: var(--bg-dark); border-radius: var(--radius-lg); padding: 64px 56px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; box-shadow: var(--shadow-lg); position: relative; overflow: hidden; }
-.lead-block::after { content: ""; position: absolute; right: -80px; top: -80px; width: 320px; height: 320px; background: radial-gradient(circle, rgba(111,143,63,.35), transparent 70%); }
-.lead-block .eyebrow { color: var(--leaf); }
-.lead-block .eyebrow::before { background: var(--leaf); }
+.lead-block::after { content: ""; position: absolute; right: -80px; top: -80px; width: 320px; height: 320px; background: radial-gradient(circle, rgba(74,85,54,.45), transparent 70%); }
+.lead-block .eyebrow { color: var(--brand-on-dark); }
+.lead-block .eyebrow::before { background: var(--brand-on-dark); }
 .lead-block h2 { color: #fff; }
 .lead-block p { color: var(--coal-muted); position: relative; }
 .lead-card { background: rgba(255,255,255,.05); border: 1px solid var(--coal-line); border-radius: var(--radius); padding: 28px; position: relative; }
@@ -289,13 +291,13 @@ section.tight { padding: 64px 0 56px; }
 .field { margin-bottom: 18px; }
 .field label { display: block; font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); margin-bottom: 7px; }
 .field input, .field select, .field textarea { width: 100%; font-family: var(--font-body); font-size: 0.98rem; color: var(--ink); background: var(--bg-app); border: 1px solid var(--hairline-strong); border-radius: var(--radius-sm); padding: 12px 14px; }
-.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--leaf); box-shadow: 0 0 0 3px rgba(111,143,63,.16); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(74,85,54,.18); }
 .field textarea { resize: vertical; min-height: 120px; }
 
 /* ---------- CTA final dark ---------- */
 .cta-final { background: var(--bg-dark); text-align: center; }
-.cta-final .eyebrow { color: var(--leaf); justify-content: center; }
-.cta-final .eyebrow::before { background: var(--leaf); }
+.cta-final .eyebrow { color: var(--brand-on-dark); justify-content: center; }
+.cta-final .eyebrow::before { background: var(--brand-on-dark); }
 .cta-final h2 { color: #fff; margin-bottom: 16px; }
 .cta-final p { color: var(--coal-muted); margin: 0 auto; }
 .cta-final .btn-row { justify-content: center; }

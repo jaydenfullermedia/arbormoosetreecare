@@ -1,7 +1,10 @@
-// Mobile nav toggle
+// Mobile nav toggle (hamburger <-> close)
 document.addEventListener('click', function (e) {
-  if (e.target.closest('.menu-toggle')) {
-    document.querySelector('.nav-links').classList.toggle('open');
+  var t = e.target.closest('.menu-toggle');
+  if (t) {
+    var open = document.querySelector('.nav-links').classList.toggle('open');
+    var ic = t.querySelector('.material-symbols-outlined');
+    if (ic) ic.textContent = open ? 'close' : 'menu';
   }
 });
 

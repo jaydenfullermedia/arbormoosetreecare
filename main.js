@@ -46,8 +46,10 @@ document.addEventListener('DOMContentLoaded', function () {
 // ---- Niagara service-area map (Leaflet, lazy-loaded) ----
 function initAreaMap() {
   if (typeof L === 'undefined' || !document.getElementById('areaMap')) return;
-  var map = L.map('areaMap', { scrollWheelZoom: false, zoomControl: true, attributionControl: true })
-    .setView([43.10, -79.20], 10);
+  var map = L.map('areaMap', {
+    scrollWheelZoom: false, zoomControl: false, attributionControl: true,
+    dragging: false, doubleClickZoom: false, boxZoom: false, keyboard: false, touchZoom: false
+  }).setView([43.10, -79.20], 10);
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     subdomains: 'abcd', maxZoom: 19, attribution: '&copy; OpenStreetMap &copy; CARTO'
   }).addTo(map);
@@ -68,8 +70,7 @@ function initAreaMap() {
   towns.forEach(function (t) {
     var name = t[0], lat = t[1], lng = t[2], r = t[3], hq = t[4];
     L.circle([lat, lng], { radius: r, color: '#2f3722', weight: hq ? 2.5 : 1.4, opacity: 0.6, fillColor: '#4a5536', fillOpacity: hq ? 0.22 : 0.12 }).addTo(map);
-    L.circleMarker([lat, lng], { radius: hq ? 8 : 5.5, color: '#fff', weight: 1.5, fillColor: hq ? '#2f3722' : '#4a5536', fillOpacity: 1 }).addTo(map)
-      .bindTooltip(name, { permanent: true, direction: 'top', offset: [0, -6], className: 'maptip' + (hq ? ' hq' : '') });
+    L.circleMarker([lat, lng], { radius: hq ? 9 : 6, color: '#fff', weight: 1.5, fillColor: hq ? '#2f3722' : '#4a5536', fillOpacity: 1 }).addTo(map);
   });
   var bounds = L.latLngBounds(towns.map(function (t) { return [t[1], t[2]]; })).pad(0.15);
   map.fitBounds(bounds);
